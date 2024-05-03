@@ -5,7 +5,7 @@ import os
 url = input("Enter Link:")
 yt = YouTube(url)
 
-# getting home directory
+# getting download directory
 download_path = os.path.expanduser('~/Downloads')
 
 # for detailed description of available downloads
