@@ -5,11 +5,7 @@ import os
 url = input("Enter Link:")
 yt = YouTube(url)
 
-<<<<<<< HEAD
 # getting download directory
-=======
-# Getting download directory
->>>>>>> c5c9e04 (Added availabe streams and gave the option to choose them. Also added if it completed successfully or not.)
 download_path = os.path.expanduser('~/Downloads')
 
 # Filter streams by file extension
