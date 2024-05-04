@@ -1,16 +1,32 @@
 from pytube import YouTube
 import os
 
-# get link
+# Get link
 url = input("Enter Link:")
 yt = YouTube(url)
 
+<<<<<<< HEAD
 # getting download directory
+=======
+# Getting download directory
+>>>>>>> c5c9e04 (Added availabe streams and gave the option to choose them. Also added if it completed successfully or not.)
 download_path = os.path.expanduser('~/Downloads')
 
-# for detailed description of available downloads
-#print(yt.streams.filter(file_extension="mp4"))
+# Filter streams by file extension
+streams = yt.streams.filter(file_extension="mp4")
 
-# downloading video and where to save
-stream = yt.streams.get_by_itag(22)
-stream.download(download_path)
+if streams:
+    # Print available streams
+    print("Available streams:")
+    for i, stream in enumerate(streams):
+        print(f"{i+1}. {stream}")
+
+    # Choose a stream
+    choice = int(input("Enter the number of the stream you want to download: "))
+    selected_stream = streams[choice-1]
+
+    # Download selected stream
+    selected_stream.download(download_path)
+    print("Download completed.")
+else:
+    print("No streams available for download.")
