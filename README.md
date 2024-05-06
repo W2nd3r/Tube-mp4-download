@@ -15,4 +15,4 @@ How to use?
 
 TESTED: This was tested on linux, so I don't know if it will work on windows or macOS
 
-NOTE: You won't be able to download age restricted videos if you are not logged in through your youtube account using pytube.
+NOTE: You won't be able to download age restricted videos if you are not logged in with youtube account using pytube.
